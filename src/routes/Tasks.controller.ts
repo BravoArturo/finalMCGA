@@ -7,14 +7,15 @@ export const getTasks : RequestHandler = (req, res) => {
 export const getTask : RequestHandler = (req, res) => {
     res.json('getting a task');
 };
-export const createTask : RequestHandler = (req, res) => {
+export const createTask : RequestHandler = async(req, res) => {
     const task = new Task(req.body);
-    console.log(task);    
-    res.json('getting tasks');
+    const savedTask= await task.save();
+    console.log(savedTask);    
+    res.json('creating a new tasks');
 };
 export const deleteTasks : RequestHandler = (req, res) => {
-    res.json('getting tasks');
+    res.json('deleting an existing task');
 };
 export const updateTasks : RequestHandler = (req, res) => {
-    res.json('getting tasks');
+    res.json('updating an existing task');
 };

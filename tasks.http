@@ -11,3 +11,8 @@ Content-Type: application/json
     "title": "My first Task",
     "description": "This is my first Task"
 }
+
+###
+PUT {{URL}}/Tasks/1
+###
+DELETE {{URL}}/Tasks/1
