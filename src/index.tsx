@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import TaskList from './components/screens/Task/TaskList';
+import TaskForm from './components/screens/Task/TaskForm';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <switch>
+        <Route exact path="/" component={TaskList}/>
+        <Route path="/newTask" component={TaskForm}/>
+      </switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
