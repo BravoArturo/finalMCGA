@@ -5,15 +5,17 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import TaskList from './components/screens/Task/TaskList';
 import TaskForm from './components/screens/Task/TaskForm';
+import Navbar from './components/screens/Navbar/Navbar'
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navbar></Navbar>
     <BrowserRouter>
-      <switch>
+      <Switch>
         <Route exact path="/" component={TaskList}/>
         <Route path="/newTask" component={TaskForm}/>
-      </switch>
+      </Switch>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
