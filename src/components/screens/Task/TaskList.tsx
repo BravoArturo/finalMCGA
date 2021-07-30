@@ -10,7 +10,15 @@ const TaskList = () => {
 
     const loadTask = async () => {
         const res = await TaskService.getTasks();
-        settasks(res.data)
+
+        const formatedDate = res.data.map(task => {
+            return {
+                ...task,
+                createdAt: task.createdAt? new Date(task.createdAt): new Date(),
+                updatedAt: task.updatedAt? new Date(task.updatedAt): new Date(),
+            }
+        })
+        settasks(formatedDate);
         console.log(res.data);
     }
     useEffect(() => {
@@ -20,7 +28,7 @@ const TaskList = () => {
         <div>
             {
                 tasks.map((task) => {
-                    return <TaskItem task={task}></TaskItem>
+                    return <TaskItem task={task} key={task._id}></TaskItem>
                 })
             }
         </div>
