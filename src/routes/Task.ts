@@ -8,6 +8,10 @@ const taskSchema = new Schema({
     description:{
         type: String,
         trim: true
+    },
+    deadline:{
+        type: String,
+        trim: true
     }
 },
     {

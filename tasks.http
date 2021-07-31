@@ -8,8 +8,9 @@ POST {{URL}}/Tasks
 Content-Type: application/json
 
 {
-    "title": "My first Task",
-    "description": "This is my first Task"
+    "title": "Test task",
+    "description": "This is a new Task",
+    "deadline": "25/08/2021"
 }
 
 ###
@@ -21,4 +22,4 @@ Content-Type: application/json
     "description": "This is my Task Updated"
 }
 ###
-DELETE {{URL}}/Tasks/60fc69c181c4c2123028cc04
+DELETE {{URL}}/Tasks/60fef337bc10602388835ff0
