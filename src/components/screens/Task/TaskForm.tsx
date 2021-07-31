@@ -20,15 +20,23 @@ const TaskForm = () => {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault(); //we cancelled the default behavior
-        const res = await TaskService.createTask(task);
-        toast.success('New Task added');
-        console.log(res.data);
-        settask(initalState);
+
+        if(!params.id){
+            const res = await TaskService.createTask(task);
+            toast.success('New Task added');
+            console.log(res.data);
+            settask(initalState);
+        }else{
+            await TaskService.updatedTask(params.id, task);
+            toast.success('Task updated');
+        }
+
     };
 
     const getTask = async (id: string) => {
         const res = await TaskService.getTask(id);
-        console.log(res);
+        const {title, description, deadline} = res.data;
+        settask({title,description,deadline});
     }
     useEffect(()=> {
         if (params.id) getTask(params.id);

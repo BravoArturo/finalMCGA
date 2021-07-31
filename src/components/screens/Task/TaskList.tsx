@@ -28,7 +28,7 @@ const TaskList = () => {
         <div>
             {
                 tasks.map((task) => {
-                    return <TaskItem task={task} key={task._id}></TaskItem>
+                    return <TaskItem task={task} key={task._id} loadTask={loadTask}></TaskItem>
                 })
             }
         </div>
