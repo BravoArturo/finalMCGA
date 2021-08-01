@@ -23,3 +23,29 @@ Content-Type: application/json
 }
 ###
 DELETE {{URL}}/Tasks/60fef337bc10602388835ff0
+
+###
+GET {{URL}}/Users
+###
+GET {{URL}}/USers/6106aa8fa50f8510e8dfd5ae
+###
+POST {{URL}}/Users
+Content-Type: application/json
+
+{
+    "userName": "amb",
+    "password": "123"
+}
+
+###
+PUT {{URL}}/Users/6106aa8fa50f8510e8dfd5ae
+Content-Type: application/json
+
+{
+    "userName": "amb",
+    "password": "125"
+}
+
+
+###
+DELETE {{URL}}/Tasks/60fef337bc10602388835ff0
