@@ -1,8 +1,9 @@
 import React, { ChangeEvent, FormEvent, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Task from './Task';
-import * as TaskService from './TaskService'
+import * as TaskService from './TaskService';
 import { useParams } from 'react-router';
+import './Task.css';
 
 const TaskForm = () => {
 
@@ -49,30 +50,30 @@ const TaskForm = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="taskStructure">
                             <div className="deadline">
-                                <label>Please enter a deadline</label>
-                                <input type="date" name="deadline" onChange={hadleInputChange} value={task.deadline}></input>
+                                <label className="labelCUTask">Please enter a deadline</label>
+                                <input className="inputCUTask" type="date" name="deadline" onChange={hadleInputChange} value={task.deadline}></input>
                             </div>
                             <div className="tittle">
-                                <label>Write a title for this task</label>
-                                <input type="text" name="title" autoFocus onChange={hadleInputChange} value={task.title}></input>
+                                <label className="labelCUTask">Write a title for this task</label>
+                                <input className="inputCUTask" type="text" name="title" autoFocus onChange={hadleInputChange} value={task.title}></input>
                             </div>
                             <div className="description">
-                                <label>Please enter a description</label>
-                                <textarea name="description" onChange={hadleInputChange} value={task.description}></textarea>
+                                <label className="labelCUTask">Please enter a description</label>
+                                <textarea className="textareaCUTask" name="description" onChange={hadleInputChange} value={task.description}></textarea>
                             </div>
                             <div className="btnTask">
                                 {
                                     params.id ?
-                                        <button>Updated task</button>
+                                        <button className="btnCUTask">Updated task</button>
                                         :
-                                        <button>Create task</button>
+                                        <button className="btnCUTask">Create task</button>
                                 }
                             </div>
                         </div>
                     </form>
                 </div>
                 <div className="footer">
-                    <p>Home</p>
+                    <p></p>
                 </div>
             </div>
         </div>
