@@ -47,7 +47,7 @@ const TaskForm = () => {
             New Task
             <div className="wrapper">
                 <div className='newTask'>
-                    <form onSubmit={handleSubmit}>
+                    <form className="formCUTask" onSubmit={handleSubmit}>
                         <div className="taskStructure">
                             <div className="deadline">
                                 <label className="labelCUTask">Please enter a deadline</label>

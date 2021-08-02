@@ -1,6 +1,114 @@
+.wrapper2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.container{
+    flex-direction: row;
+    display: block;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.structureTask {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #ffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07),
+                0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07),
+                0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.date {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9db4c4;
+    border-radius: 5px;
+}
+
 .colorRed{
-    color: red;
+    color: #ff0000;
+    font-size: 1rem;
+    font-style: oblique;
 }
 .colorGreen{
     color: green;
+    font-size: 1rem;
+    font-style: oblique;
+}
+
+.deadlineTask {
+    font-size: 3rem;
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.descriptionTask {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittleTask {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eb6de4;
+    border-radius: 5px;
+}
+.taskTittle {
+    font-size: 3rem;
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btnDeleteTask,
+.btnUpdateTask { 
+    width: 100%;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border: 2px solid #fafafa;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnDeleteTask {
+    background-color: #d40000;
+}
+
+.btnUpdateTask {
+    background-color: #2da000;
+}
+
+.btnDeleteTask:hover {
+    border: 2px solid #910202;
+    color: #ffffff;      
+    transition: 0.3s; 
+}
+
+.btnUpdateTask:hover {
+    border: 2px solid #206b02;
+    color: #ffffff;      
+    transition: 0.3s;               
 }

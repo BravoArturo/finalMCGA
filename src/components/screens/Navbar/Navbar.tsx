@@ -1,12 +1,13 @@
 import react from 'react'
 import { BrowserRouter, Link, Router } from 'react-router-dom';
+import './Navbar.css'
 
 const Navbar = () => {
-    return <div>
-        <div>
+    return <div className="wrapper">
+        <div className="tittleProject">
             FINAL MCGA BRAVO, GARELLO, MONEGHESSI
         </div>
-        <nav>
+        <nav className="navbar">
             <ul>
                 <li>
                     <a href="/"> Home</a>
