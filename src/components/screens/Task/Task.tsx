@@ -5,6 +5,5 @@ export default interface Task {
     title: string,
     updatedAt?: string | Date,
     _id?: string
-
 }
 

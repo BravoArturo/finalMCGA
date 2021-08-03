@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Router } from 'react-router-dom';
 import './Navbar.css'
 
 const Navbar = () => {
-    return <div className="wrapper">
+    return <div className="container">
         <div className="tittleProject">
             <h1>FINAL MCGA BRAVO, GARELLO, MONEGHESSI</h1>
         </div>

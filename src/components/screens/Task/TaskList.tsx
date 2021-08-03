@@ -26,11 +26,20 @@ const TaskList = () => {
     }, [])
     return (
         <div>
-            {
+            <div className="header">
+                <div>
+                    <h1 className="tittleMyTasks">My Tasks</h1>
+                </div>
+                <div>
+                    <a className="icon" href="/">Home</a>
+                    <a className="icon" href="/newTask">Create Task</a>
+                </div>
+            </div>
+            <div className="loadTask">{
                 tasks.map((task) => {
                     return <TaskItem task={task} key={task._id} loadTask={loadTask}></TaskItem>
                 })
-            }
+            }</div>
         </div>
     );
 }
