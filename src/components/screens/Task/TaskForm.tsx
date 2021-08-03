@@ -72,7 +72,6 @@ const TaskForm = () => {
                     </form>
                 </div>
                 <div className="footer">
-                    <i className="fas fa-home"></i>
                     <a className="icon" href="/">Home</a>
                     <p>Home</p>
                 </div>

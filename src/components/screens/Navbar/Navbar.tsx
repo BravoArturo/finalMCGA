@@ -9,7 +9,7 @@ const Navbar = () => {
         </div>
         <div className="navMenu">
             <nav className="navbar">
-                <a href="/"> Home</a>
+                <a href="/myTask">My Task</a>
                 {/* This should use Link */}
                 <a href="/newTask">New Task</a>
                 <div className="dot"></div>

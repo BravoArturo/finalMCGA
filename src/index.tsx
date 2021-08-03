@@ -8,14 +8,15 @@ import TaskForm from './components/screens/Task/TaskForm';
 import Navbar from './components/screens/Navbar/Navbar'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TaskItem from './components/screens/Task/TaskItem';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar></Navbar>
     <BrowserRouter>
       <div>
         <Switch>
-          <Route exact path="/" component={TaskList} />
+          <Route exact path="/" component={Navbar} />
+          <Route path="/myTask" component={TaskList} />
           <Route path="/newTask" component={TaskForm} />
           <Route path="/updated/:id" component={TaskForm} />
         </Switch>

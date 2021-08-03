@@ -18,6 +18,10 @@ const TaskItem = ({ task, loadTask }: Props) => {
     }
     return (
         <div>
+            <div className="header">
+                <a className="icon" href="/">Home</a>
+                <p>Home</p>
+            </div>
             <div className="wrapper2">
                 <div className="container">
                     <form className="formTaskList">

@@ -14,8 +14,8 @@ const TaskList = () => {
         const formatedDate = res.data.map(task => {
             return {
                 ...task,
-                createdAt: task.createdAt? new Date(task.createdAt): new Date(),
-                updatedAt: task.updatedAt? new Date(task.updatedAt): new Date(),
+                createdAt: task.createdAt ? new Date(task.createdAt) : new Date(),
+                updatedAt: task.updatedAt ? new Date(task.updatedAt) : new Date(),
             }
         })
         settasks(formatedDate);
