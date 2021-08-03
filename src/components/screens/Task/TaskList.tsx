@@ -31,7 +31,7 @@ const TaskList = () => {
                     <h1 className="tittleMyTasks">My Tasks</h1>
                 </div>
                 <div>
-                    <a className="icon" href="/">Home</a>
+                    <a className="icon" href="/home">Home</a>
                     <a className="icon" href="/newTask">Create Task</a>
                 </div>
             </div>

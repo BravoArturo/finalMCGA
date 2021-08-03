@@ -12,6 +12,7 @@ const Navbar = () => {
                 <a href="/myTask">My Task</a>
                 {/* This should use Link */}
                 <a href="/newTask">New Task</a>
+                <a href="/">Log Out</a>
                 <div className="dot"></div>
             </nav>
         </div>

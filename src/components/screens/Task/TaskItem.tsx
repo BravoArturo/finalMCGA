@@ -1,6 +1,7 @@
 import react from 'react';
 import Task from './Task';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import * as TaskService from './TaskService';
 import './StructureTask.css';
 
@@ -15,7 +16,16 @@ const TaskItem = ({ task, loadTask }: Props) => {
     const handleDdelete = async (id: string) => {
         await TaskService.deleteTask(id);
         loadTask();
+        toast.error("One item was deleted");
+    };
+
+    const deleteTaskConfirmation = (id: string) => {
+        window.confirm("Delete one task?") ?
+            handleDdelete(id)
+            :
+            console.log("No delete");
     }
+
     return (
         <div>
             <div className="wrapper2">
@@ -42,7 +52,7 @@ const TaskItem = ({ task, loadTask }: Props) => {
                             </div>
                         </div>
                         <div>
-                            <button className="btnDeleteTask" onClick={() => task._id && handleDdelete(task._id)}>Delete</button>
+                            <button className="btnDeleteTask" onClick={() => task._id && deleteTaskConfirmation(task._id)}>Delete</button>
                         </div>
                     </form>
                 </div>

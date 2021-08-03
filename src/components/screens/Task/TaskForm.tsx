@@ -31,7 +31,6 @@ const TaskForm = () => {
             await TaskService.updatedTask(params.id, task);
             toast.success('Task updated');
         }
-
     };
 
     const getTask = async (id: string) => {
@@ -72,7 +71,7 @@ const TaskForm = () => {
                     </form>
                 </div>
                 <div className="footer">
-                    <a className="icon" href="/">Home</a>
+                    <a className="icon" href="/home">Home</a>
                 </div>
             </div>
         </div>

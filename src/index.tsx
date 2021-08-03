@@ -15,7 +15,8 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route exact path="/" component={Navbar} />
+
+          <Route path="/home" component={Navbar} />
           <Route path="/myTask" component={TaskList} />
           <Route path="/newTask" component={TaskForm} />
           <Route path="/updated/:id" component={TaskForm} />
