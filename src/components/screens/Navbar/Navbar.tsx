@@ -5,19 +5,16 @@ import './Navbar.css'
 const Navbar = () => {
     return <div className="wrapper">
         <div className="tittleProject">
-            FINAL MCGA BRAVO, GARELLO, MONEGHESSI
+            <h1>FINAL MCGA BRAVO, GARELLO, MONEGHESSI</h1>
         </div>
-        <nav className="navbar">
-            <ul>
-                <li>
-                    <a href="/"> Home</a>
-                    {/* This should use Link */}
-                </li>
-                <li>
-                    <a href="/newTask">Create new Task</a>
-                </li>
-            </ul>
-        </nav>
+        <div className="navMenu">
+            <nav className="navbar">
+                <a href="/"> Home</a>
+                {/* This should use Link */}
+                <a href="/newTask">New Task</a>
+                <div className="dot"></div>
+            </nav>
+        </div>
     </div>
 }
 

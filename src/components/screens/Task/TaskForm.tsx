@@ -44,7 +44,6 @@ const TaskForm = () => {
     }, [])
     return (
         <div>
-            New Task
             <div className="wrapper">
                 <div className='newTask'>
                     <form className="formCUTask" onSubmit={handleSubmit}>
@@ -73,7 +72,9 @@ const TaskForm = () => {
                     </form>
                 </div>
                 <div className="footer">
-                    <p></p>
+                    <i className="fas fa-home"></i>
+                    <a className="icon" href="/">Home</a>
+                    <p>Home</p>
                 </div>
             </div>
         </div>

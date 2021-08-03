@@ -12,6 +12,11 @@
     flex-wrap: wrap;
 }
 
+.formTaskList {
+    display: flex;
+    flex-direction: column;
+}
+
 .structureTask {
     display: flex;
     height: 100%;
@@ -75,7 +80,7 @@
     border-radius: 5px;
 }
 .taskTittle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

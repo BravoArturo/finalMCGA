@@ -20,7 +20,7 @@ const TaskItem = ({ task, loadTask }: Props) => {
         <div>
             <div className="wrapper2">
                 <div className="container">
-                    <form>
+                    <form className="formTaskList">
                         <div>
                             <button className="btnUpdateTask" onClick={() => history.push(`/updated/${task._id}`)}>Edit</button>
                         </div>
