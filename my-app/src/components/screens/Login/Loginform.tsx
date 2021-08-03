@@ -7,6 +7,7 @@ import Login from './Login';
 import * as LoginService from './loginService'
 import './styles.css'
 
+
 const Loginform = () => {
     const history = useHistory();
 
@@ -25,8 +26,8 @@ const Loginform = () => {
             login.password == searchUser[0].password? 
             history.push({
                 pathname: '/Menu'
-                // ,
-                // state: { detail: 'some_value' }
+                 ,
+                 state: {statusLogin:true}
             }) 
             :
             alert("Usuario o contraseña no coinciden");
@@ -35,22 +36,29 @@ const Loginform = () => {
         }
     };
 
-    return (
-        <div className="wrapper">            
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <header>¡Hey! Enter your usuername and password.</header>  
-                </div>                             
-                <div className="inp">
-                    <input type="text" name="userName" placeholder="Please write your user name" autoFocus onChange={hadleInputChange} value={login.userName}></input>
-                    <input type="text" name="password" placeholder="Please write your password" onChange={hadleInputChange} value={login.password}></input>
-                </div>
-                <div className="btn">
-                    <button>Log In</button>
-                </div>
-                
-            </form>
-        </div>
+    return (   
+            <div className="container">
+                <header> Welcome</header>                
+                <form onSubmit={handleSubmit}>
+                    <div className="data">   
+                        <input type="text" name="userName" placeholder="Please write your user name" autoFocus onChange={hadleInputChange} value={login.userName}/>
+                        <div className="underline"></div>
+                        <label>Username</label>
+                    </div>
+                    <div className="data">                        
+                        <input type="text" name="password" placeholder="Please write your password" onChange={hadleInputChange} value={login.password}/>                        
+                        <div className="underline"></div>
+                        <label>Password</label>
+                    </div>
+                    <div className="forgot-pass">
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <div className="btn">
+                        <div className="inner"></div>
+                        <button type="submit">log in</button>
+                    </div>
+                </form>
+            </div>              
     )
 }
 
