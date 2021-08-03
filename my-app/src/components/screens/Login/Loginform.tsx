@@ -40,26 +40,22 @@ const Loginform = () => {
             <div className="container">
                 <header> Welcome</header>                
                 <form onSubmit={handleSubmit}>
-                    <div className="data">   
+                    <div className="data">  
+                        <label>Username</label> 
                         <input type="text" name="userName" placeholder="Please write your user name" autoFocus onChange={hadleInputChange} value={login.userName}/>
-                        <div className="underline"></div>
-                        <label>Username</label>
                     </div>
-                    <div className="data">                        
+                    <div className="data pass">     
+                        <label>Password</label>                   
                         <input type="text" name="password" placeholder="Please write your password" onChange={hadleInputChange} value={login.password}/>                        
-                        <div className="underline"></div>
-                        <label>Password</label>
                     </div>
                     <div className="forgot-pass">
                         <a href="#">Forgot Password</a>
                     </div>
-                    <div className="btn">
-                        <div className="inner"></div>
-                        <button type="submit">log in</button>
+                    <div className="btnConteiner">
+                        <button className="btn" type="submit">log in</button>
                     </div>
                 </form>
             </div>              
     )
 }
-
 export default Loginform;
