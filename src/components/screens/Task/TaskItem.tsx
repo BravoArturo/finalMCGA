@@ -31,27 +31,23 @@ const TaskItem = ({ task, loadTask }: Props) => {
             <div className="wrapper2">
                 <div className="container">
                     <form className="formTaskList">
+                        <div className="date">
+                            <label className="deadlineTask">{task.deadline}</label>
+                            {
+                                ((Date.parse(task.deadline) - Date.now()) / days) <= 5 ?
+                                    <div className="colorRed">You have 5 days or less to do this task</div>
+                                    :
+                                    <div className="colorGreen">You have more than 5 days to do this task</div>
+                            }
+                        </div>
+                        <div className="tittleTask">
+                            <label className="taskTittle">{task.title}</label>
+                        </div>
+                        <div className="descriptionTask">
+                            <label>{task.description}</label>
+                        </div>
                         <div>
                             <button className="btnUpdateTask" onClick={() => history.push(`/updated/${task._id}`)}>Edit</button>
-                        </div>
-                        <div className="structureTask">
-                            <div className="date">
-                                <label className="deadlineTask">{task.deadline}</label>
-                                {
-                                    ((Date.parse(task.deadline) - Date.now()) / days) <= 5 ?
-                                        <div className="colorRed">You have 5 days or less to do this task</div>
-                                        :
-                                        <div className="colorGreen">You have more than 5 days to do this task</div>
-                                }
-                            </div>
-                            <div className="descriptionTask">
-                                <label>{task.description}</label>
-                            </div>
-                            <div className="tittleTask">
-                                <label className="taskTittle">{task.title}</label>
-                            </div>
-                        </div>
-                        <div>
                             <button className="btnDeleteTask" onClick={() => task._id && deleteTaskConfirmation(task._id)}>Delete</button>
                         </div>
                     </form>

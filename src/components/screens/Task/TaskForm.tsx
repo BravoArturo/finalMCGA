@@ -72,6 +72,7 @@ const TaskForm = () => {
                 </div>
                 <div className="footer">
                     <a className="icon" href="/home">Home</a>
+                    <a className="icon" href="/myTask">My Task</a>
                 </div>
             </div>
         </div>

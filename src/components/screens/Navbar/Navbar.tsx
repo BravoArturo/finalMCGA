@@ -9,10 +9,10 @@ const Navbar = () => {
         </div>
         <div className="navMenu">
             <nav className="navbar">
-                <a href="/myTask">My Task</a>
+                <a className="menuMyTask" href="/myTask">My Task</a>
                 {/* This should use Link */}
-                <a href="/newTask">New Task</a>
-                <a href="/">Log Out</a>
+                <a className="menuNewTask" href="/newTask">New Task</a>
+                <a className="menuLogOut" href="/">Log Out</a>
                 <div className="dot"></div>
             </nav>
         </div>
