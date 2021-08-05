@@ -127,3 +127,13 @@
     color: #ffffff;      
     transition: 0.3s;               
 }
+
+.header {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
