@@ -7,7 +7,7 @@ import userRouter from './routes/User.routes';
 
 const app = express();
 
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({extended: false})); //When is sent some information by a post from a form it can understand what contains.
