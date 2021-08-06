@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{  
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;   
+  background: -webkit-linear-gradient(135deg, #f0f0f0 10%, #e0e0e0 90%);  
+
+  /* background: -webkit-linear-gradient(45deg, #b9b9b9c9 5%, #f0f0f0 95%);   */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  padding: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.container form .data {
+  height: 45px;
+  width: 25vw;
+  margin: 20px 0px 15px 0px;
+}
+
+form .data label {
+  font-size: 10px;
+}
+
+form .data input {
+  height: 80%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 8px;
+  border: 1px solid silver;
+}
+
+form .data input:focus {
+  border-color: #3498db;
+  border-bottom-width: 2px;
+}
+
+form .forgot-pass a {
+  display: flex;
+  margin: 0px 0px 20px 0px;
+  color: #3498db;
+  font-size: 8px;
+  text-decoration: none;
+}
+
+form .forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;  
+  border: none;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #56d8e4 10%, #3498db 90%);  
+  border-radius: 2px;  
+  box-shadow: inset 0 0 0 0 #56d8e4;
+  transition: ease-out .35s;
+  font-size: 18px;
+  font-weight: 500;  
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {      
+  background: -webkit-linear-gradient(left, #77d7e0bb 10%, #3498dbbe 90%);  
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.500);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 400px) {
+  .container header {
+    font-weight: 500;
+    font-size:20px;
+  }
+}

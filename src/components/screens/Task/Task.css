@@ -1,0 +1,119 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    display: flex;
+    width: 100%;
+    height: 200%;
+}
+
+.formCUTask {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1.6em;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #ffe99a;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07),
+                0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07),
+                0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.taskStructure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.labelCUTask {
+    margin: 0.3em 0;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.inputCUTask,
+.textareaCUTask {
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 2px solid #bebed2;
+    outline: none;
+    background: none;
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.inputCUTask {
+    border: 2px solid #bebed2;
+    border-radius: 5px;
+    resize: none;
+}
+
+.textareaCUTask {
+    height: 7em;
+    border: 2px solid #bebed2;
+    border-radius: 5px;
+    resize: none;
+}
+
+.deadline, 
+.tittle, 
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnCUTask {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(left, #56d8e4 10%, #3498db 90%);
+    font-size: 1.1rem;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnCUTask:hover {
+    background: -webkit-linear-gradient(left, #77d7e0bb 10%, #3498dbbe 90%);
+    color: #000000;      
+    transition: 0.3s;               
+}
+
+.inputCUTask:focus,
+.textareaCUTask:focus,
+.btnCUTask:focus {
+    outline: none;
+    border: 2px solid #000000;
+}
+
+.footer {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}

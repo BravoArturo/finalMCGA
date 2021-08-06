@@ -1,0 +1,139 @@
+.icon {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 4px;
+}
+.icon:hover {
+    transition: 0.3s;
+    color: #9e068a;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerTask {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.formTaskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    box-sizing: border-box;     
+    background-color: #ffe174;
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07),
+                0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07),
+                0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.date {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe174;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.colorRed{
+    color: #ff0000;
+    font-size: 1rem;
+    font-style: oblique;
+}
+.colorGreen{
+    color: green;
+    font-size: 1rem;
+    font-style: oblique;
+}
+
+.deadlineTask {
+    font-size: 2rem;
+    font-style: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.descriptionTask {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    background-color: #fae59a;
+}
+
+.tittleTask {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffe791;
+}
+.taskTittle {
+    font-size: 1.3rem;
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btnDeleteTask,
+.btnUpdateTask { 
+    padding: 8px 12px;
+    flex-direction: row;
+    box-sizing: border-box;
+    border: 2px solid #ffe174;
+    border-radius: 15px;
+    background-color: #810370;
+    font-size: 1.1rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnDeleteTask {
+    background-color: #d40000;
+}
+
+.btnUpdateTask {
+    background-color: #2da000;
+}
+
+.btnDeleteTask:hover {
+    border: 2px solid #910202;
+    color: #ffffff;      
+    transition: 0.3s; 
+}
+
+.btnUpdateTask:hover {
+    border: 2px solid #206b02;
+    color: #ffffff;      
+    transition: 0.3s;               
+}
+
+.header {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
