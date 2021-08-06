@@ -13,14 +13,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const config_1 = __importDefault(require("./config"));
 (() => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const mongooseOptions = {
             useUnifiedTopology: true,
             useNewUrlParser: true
         };
-        const db = yield mongoose_1.default.connect(`mongodb://${config_1.default.mongoHost}/${config_1.default.mongoDataBase}`, mongooseOptions);
+        //mongodb+srv://admin:<password>@cluster0.5esi4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+        //const db = await mongoose.connect(`mongodb://${config.mongoHost}/${config.mongoDataBase}`, mongooseOptions);
+        const db = yield mongoose_1.default.connect("mongodb+srv://admin:admin@cluster0.5esi4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", mongooseOptions);
         console.log("database is connected to:" + db.connection.name);
     }
     catch (error) {
