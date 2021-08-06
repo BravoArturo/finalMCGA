@@ -3,9 +3,11 @@ import { toast } from 'react-toastify';
 import Task from './Task';
 import * as TaskService from './TaskService';
 import { useParams } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import './Task.css';
 
 const TaskForm = () => {
+    const history = useHistory();
 
     interface Params {
         id: string;
@@ -24,8 +26,8 @@ const TaskForm = () => {
 
         if (!params.id) {
             const res = await TaskService.createTask(task);
-            toast.success('New Task added');
             console.log(res.data);
+            toast.success("Task Created")
             settask(initalState);
         } else {
             await TaskService.updatedTask(params.id, task);
@@ -71,7 +73,11 @@ const TaskForm = () => {
                     </form>
                 </div>
                 <div className="footer">
-                    <a className="icon" href="/home">Home</a>
+                    <a className="icon" href="/home"onClick={() => history.push({
+                    pathname: '/home'
+                    ,
+                    state: { statusLogin: true }
+                })}>Home</a>
                     <a className="icon" href="/myTask">My Task</a>
                 </div>
             </div>

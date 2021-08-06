@@ -2,10 +2,12 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Task from "./Task";
+import { useHistory } from 'react-router-dom';
 import * as TaskService from './TaskService'
 import TaskItem from './TaskItem'
 
 const TaskList = () => {
+    const history = useHistory();
     const [tasks, settasks] = useState<Task[]>([]);
 
     const loadTask = async () => {
@@ -31,7 +33,11 @@ const TaskList = () => {
                     <h1 className="tittleMyTasks">My Tasks</h1>
                 </div>
                 <div>
-                    <a className="icon" href="/home">Home</a>
+                    <a className="icon" href="/home" onClick={() => history.push({
+                    pathname: '/home'
+                    ,
+                    state: { statusLogin: true }
+                })}>Home</a>
                     <a className="icon" href="/newTask">Create Task</a>
                 </div>
             </div>

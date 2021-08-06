@@ -1,8 +1,8 @@
 import react from 'react';
 import Task from './Task';
 import { useHistory } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import * as TaskService from './TaskService';
+import { toast } from 'react-toastify';
 import './StructureTask.css';
 
 interface Props {
@@ -15,8 +15,8 @@ const TaskItem = ({ task, loadTask }: Props) => {
 
     const handleDdelete = async (id: string) => {
         await TaskService.deleteTask(id);
-        loadTask();
         toast.error("One item was deleted");
+        loadTask();
     };
 
     const deleteTaskConfirmation = (id: string) => {
