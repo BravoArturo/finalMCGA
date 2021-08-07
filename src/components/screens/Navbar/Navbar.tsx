@@ -19,7 +19,7 @@ const Navbar = () => {
                         <a className="menuMyTask" href="/myTask">My Task</a>
                         {/* This should use Link */}
                         <a className="menuNewTask" href="/newTask">New Task</a>
-                        <a className="menuLogOut" href="/">Log Out</a>
+                        <a className="menuLogOut" href="/finalMCGA">Log Out</a>
                         <div className="dot"></div>
                     </nav>
                 </div>

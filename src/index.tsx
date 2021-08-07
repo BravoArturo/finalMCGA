@@ -17,7 +17,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/finalMCGA" component={Login} />
           <Route path="/home" component={Navbar} />
           <Route path="/newTask" component={TaskForm} />
           <Route path="/myTask" component={TaskList} />
