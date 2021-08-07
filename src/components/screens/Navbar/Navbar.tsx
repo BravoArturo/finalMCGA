@@ -18,12 +18,12 @@ const Navbar = () => {
                 </div>
                 <div className="navMenu">
                     <nav className="navbar">
-                        <a className="menuMyTask" onClick={() => history.push({
+                        <a className="menuMyTask" href="/myTask" onClick={() => history.push({
                     pathname: '/myTask'})}>My Task</a>
                         {/* This should use Link */}
-                        <a className="menuNewTask" onClick={() => history.push({
+                        <a className="menuNewTask" href="/newTask" onClick={() => history.push({
                     pathname: '/newTask'})}>New Task</a>
-                        <a className="menuLogOut" onClick={() => history.push({
+                        <a className="menuLogOut" href="/finalMCGA" onClick={() => history.push({
                     pathname: '/finalMCGA'})}>Log Out</a>
                         <div className="dot"></div>
                     </nav>

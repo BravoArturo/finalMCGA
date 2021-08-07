@@ -33,12 +33,12 @@ const TaskList = () => {
                     <h1 className="tittleMyTasks">My Tasks</h1>
                 </div>
                 <div>
-                    <a className="icon" onClick={() => history.push({
+                    <a className="icon" href="/home" onClick={() => history.push({
                     pathname: '/home'
                     ,
                     state: { statusLogin: true }
                 })}>Home</a>
-                    <a className="icon" onClick={() => history.push({
+                    <a className="icon" href="/newTask"onClick={() => history.push({
                     pathname: '/newTask'})}>Create Task</a>
                 </div>
             </div>
