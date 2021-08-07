@@ -18,7 +18,7 @@ const TaskItem = ({ task, loadTask }: Props) => {
         toast.error("One item was deleted");
         loadTask();
     };
- 
+  
     const deleteTaskConfirmation = (id: string) => {
         window.confirm("Delete one task?") ?
             handleDdelete(id)
