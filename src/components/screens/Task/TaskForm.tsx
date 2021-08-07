@@ -73,12 +73,14 @@ const TaskForm = () => {
                     </form>
                 </div>
                 <div className="footer">
-                    <a className="icon" href="/home"onClick={() => history.push({
+                    <a className="icon" onClick={() => history.push({
                     pathname: '/home'
                     ,
                     state: { statusLogin: true }
                 })}>Home</a>
-                    <a className="icon" href="/myTask">My Task</a>
+                    <a className="icon" onClick={() => history.push({
+                    pathname: '/myTask'
+                })}>My Task</a>
                 </div>
             </div>
         </div>
