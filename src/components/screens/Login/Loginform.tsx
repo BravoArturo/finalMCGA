@@ -45,7 +45,7 @@ const Loginform = () => {
     return (
         <div className="container">
             <header> Welcome</header>
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
                 <div className="data">
                     <label>Username</label>
                     <input type="text" name="userName" placeholder="Please write your user name" autoFocus onChange={hadleInputChange} value={login.userName} />
