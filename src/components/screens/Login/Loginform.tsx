@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import Login from './Login';
 import * as LoginService from './loginService'
 import './styles.css'
-
+import swal from 'sweetalert';
 
 const Loginform = () => {
     const history = useHistory();
@@ -22,6 +22,12 @@ const Loginform = () => {
         e.preventDefault(); //we cancelled the default behavior
         const res = await LoginService.getUsers();
         const searchUser = res.data.filter(user => user.userName == login.userName);
+        const loginAlert=()=>{
+            swal({
+                title:"User and password do not match", 
+                className: "red-bg",
+            }); 
+        }   
         if (searchUser.length > 0) {
             login.password == searchUser[0].password ?
                 history.push({
@@ -30,9 +36,9 @@ const Loginform = () => {
                     state: { statusLogin: true }
                 })
                 :
-                alert("Usuario o contraseña no coinciden");
+                loginAlert();
         } else {
-            alert("Usuario o contraseña no coinciden");
+            loginAlert();
         }
     };
 
@@ -46,10 +52,7 @@ const Loginform = () => {
                 </div>
                 <div className="data pass">
                     <label>Password</label>
-                    <input type="text" name="password" placeholder="Please write your password" onChange={hadleInputChange} value={login.password} />
-                </div>
-                <div className="forgot-pass">
-                    <a href="#">Forgot Password</a>
+                    <input type="password" name="password" placeholder="Please write your password" onChange={hadleInputChange} value={login.password} />
                 </div>
                 <div className="btnConteiner">
                     <button className="btn" type="submit">log in</button>

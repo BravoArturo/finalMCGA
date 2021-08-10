@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{  
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
+*{
   font-family: 'Poppins', sans-serif;
 }
 
@@ -13,8 +10,6 @@ body {
   min-height: 100vh;
   min-width: 100vw;   
   background: -webkit-linear-gradient(135deg, #f0f0f0 10%, #e0e0e0 90%);  
-
-  /* background: -webkit-linear-gradient(45deg, #b9b9b9c9 5%, #f0f0f0 95%);   */
 }
 
 .container {
@@ -22,7 +17,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30vw;
   padding: 10px;
   background: #e0e0e0;
   border-radius: 5px;
@@ -34,14 +28,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   font-size: x-large;
   font-weight: 600;
 }
 
 .container form .data {
   height: 45px;
-  width: 25vw;
   margin: 20px 0px 15px 0px;
 }
 
@@ -62,18 +54,6 @@ form .data input:focus {
   border-bottom-width: 2px;
 }
 
-form .forgot-pass a {
-  display: flex;
-  margin: 0px 0px 20px 0px;
-  color: #3498db;
-  font-size: 8px;
-  text-decoration: none;
-}
-
-form .forgot-pass a:hover {
-  text-decoration: underline;
-}
-
 .btn {
   display: flex;
   flex-direction: column;
@@ -81,6 +61,7 @@ form .forgot-pass a:hover {
   align-items: center;
   height: 100%;
   width: 100%;  
+  margin: 25px 0px 0px 0px;
   border: none;
   color: #fff;
   background: -webkit-linear-gradient(left, #56d8e4 10%, #3498db 90%);  
@@ -106,9 +87,35 @@ form .forgot-pass a:hover {
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-@media screen and (max-width: 400px) {
+.red-bg {
+  width: 25vw;
+  background-color: #77d7e0c9;
+}
+
+.red-bg button{
+  background-color: #000;
+  border: none;
+}
+
+.red-bg button:hover{
+  color: #00000080;
+  transition: ease-out .35s;
+}
+
+@media screen and (max-width: 600px) {
   .container header {
     font-weight: 500;
     font-size:20px;
+  }
+  .red-bg {
+    width: 50%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .red-bg {
+    width: 50%;
+    font-weight: 200;
   }
 }
