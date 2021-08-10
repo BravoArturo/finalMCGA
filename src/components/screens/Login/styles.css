@@ -51,6 +51,7 @@ body {
 }
 
 .form .data input:focus {
+  outline: none;
   border-color: #3498db;
   border-bottom-width: 2px;
 }
